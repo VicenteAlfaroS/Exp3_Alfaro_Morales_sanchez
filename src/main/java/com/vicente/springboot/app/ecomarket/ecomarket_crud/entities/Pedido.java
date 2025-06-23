@@ -1,8 +1,5 @@
 package com.vicente.springboot.app.ecomarket.ecomarket_crud.entities;
 
-
-import java.util.List;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,12 +17,12 @@ public class Pedido {
     private Long userId;
     private String fecha;
     private String estado;
-    private List<Integer> productosId;
+    private String productosId;
     
     public Pedido() {
     }
 
-    public Pedido(Long id, Long userId, String fecha, String estado, List<Integer> productosId) {
+    public Pedido(Long id, Long userId, String fecha, String estado, String productosId) {
         this.id = id;
         this.userId = userId;
         this.fecha = fecha;
@@ -65,11 +62,11 @@ public class Pedido {
         this.estado = estado;
     }
 
-    public List<Integer> getProductosId() {
+    public String getProductosId() {
         return productosId;
     }
 
-    public void setProductosId(List<Integer> productosId) {
+    public void setProductosId(String productosId) {
         this.productosId = productosId;
     }
 
