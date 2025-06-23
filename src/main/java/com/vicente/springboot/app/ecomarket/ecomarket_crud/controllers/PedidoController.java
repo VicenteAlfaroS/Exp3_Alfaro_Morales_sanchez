@@ -53,7 +53,7 @@ public class PedidoController {
             Pedido pedidoExistente = pedidoOptional.get();
             pedidoExistente.setEstado(unPedido.getEstado());
             pedidoExistente.setFecha(unPedido.getFecha());
-            pedidoExistente.setProductos(unPedido.getProductos());
+            pedidoExistente.setProductosId(unPedido.getProductosId());
             pedidoExistente.setUserId(unPedido.getUserId());
             Pedido pedidoModificado = service.save(pedidoExistente);
             return ResponseEntity.ok(pedidoModificado);

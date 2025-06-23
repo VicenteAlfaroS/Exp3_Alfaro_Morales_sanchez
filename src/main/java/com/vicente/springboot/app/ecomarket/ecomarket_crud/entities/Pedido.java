@@ -20,17 +20,17 @@ public class Pedido {
     private Long userId;
     private String fecha;
     private String estado;
-    private List <Producto> productos;
+    private List<Integer> productosId;
     
     public Pedido() {
     }
 
-    public Pedido(Long id, Long userId, String fecha, String estado, List<Producto> productos) {
+    public Pedido(Long id, Long userId, String fecha, String estado, List<Integer> productosId) {
         this.id = id;
         this.userId = userId;
         this.fecha = fecha;
         this.estado = estado;
-        this.productos = productos;
+        this.productosId = productosId;
     }
 
     public Long getId() {
@@ -65,12 +65,12 @@ public class Pedido {
         this.estado = estado;
     }
 
-    public List<Producto> getProductos() {
-        return productos;
+    public List<Integer> getProductosId() {
+        return productosId;
     }
 
-    public void setProductos(List<Producto> productos) {
-        this.productos = productos;
+    public void setProductosId(List<Integer> productosId) {
+        this.productosId = productosId;
     }
 
     
